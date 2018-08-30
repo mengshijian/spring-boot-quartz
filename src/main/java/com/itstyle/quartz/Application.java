@@ -1,7 +1,8 @@
 package com.itstyle.quartz;
 
-import org.apache.log4j.Logger;
 import org.quartz.SchedulerException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
@@ -12,7 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 public class Application {
-	private static final Logger logger = Logger.getLogger(Application.class);
+	private static final Logger logger = LoggerFactory.getLogger(Application.class);
 	
 	public static void main(String[] args) throws InterruptedException, SchedulerException {
 		SpringApplication.run(Application.class, args);
